@@ -11,7 +11,7 @@ const Script = () => {
         children={script}
         remarkPlugins={[remarkGfm]}
         components={{
-          code({ node, className, children, ...props }) {
+          code({ className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || "");
             return match ? (
               <SyntaxHighlighter PreTag="div" language="python">
