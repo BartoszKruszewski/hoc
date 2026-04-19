@@ -17,6 +17,7 @@ The project was inspired by the study sessions with school students which we hos
 See it in action [here](https://ksiuwr.github.io/hoc).
 
 ## 🖼️ Screenshots
+
 ![Tasks view](images/tasks-view.png)
 
 ![Script overview](images/script-overview.png)
@@ -34,7 +35,6 @@ See it in action [here](https://ksiuwr.github.io/hoc).
 
 - **Task Categories**:
   Organized sets of exercises:
-
   - _Podstawy programowania_ - Basics of programming concepts.
   - _Praca z listami_ - Working with list data structures.
   - _Operacje na tekstach_ - Manipulating and processing strings.
@@ -61,8 +61,8 @@ Follow this steps to run the project locally on your machine.
 ### Installation
 
 ```bash
-git clone https://github.com/czarekmilek/Python-Learning-Platform.git
-cd Python-Learning-Platform/learning-platform
+git clone https://github.com/ksiuwr/hoc.git
+cd hoc
 
 # Install dependencies
 npm install           # or yarn install
@@ -74,7 +74,7 @@ npm install           # or yarn install
 npm run dev           # or yarn dev
 ```
 
-Open your browser at [http://localhost:3000](http://localhost:3000).
+Open your browser at [http://localhost:5173/hoc](http://localhost:5173/hoc).
 
 ### Building for Production
 
