@@ -27,10 +27,10 @@ const TasksNavbar = ({
           if (isSelected && !isDone) {
             categoryClasses = "bg-white text-indigo-600 hover:cursor-default";
           } else if (!isSelected && isDone) {
-            categoryClasses = "bg-green-200 text-green-900 hover:bg-green-100 hover:-translate-y-0.5";
-          } else if (isSelected && isDone) {
             categoryClasses =
-              "bg-green-600 text-green-200 hover:cursor-default";
+              "bg-green-200 text-green-900 hover:bg-green-100 hover:-translate-y-0.5";
+          } else if (isSelected && isDone) {
+            categoryClasses = "bg-green-600 text-green-200 hover:cursor-default";
           } else {
             categoryClasses =
               "bg-indigo-300 text-violet-900 hover:bg-indigo-100 hover:-translate-y-0.5";

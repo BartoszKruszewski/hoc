@@ -22,9 +22,7 @@ const groupByCategory = (tasks: Task[]) => {
 const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
   const tasksByCategory = groupByCategory(tasks);
   const categories = Object.keys(tasksByCategory);
-  const [selectedCategory, setSelectedCategory] = useState<string>(
-    categories[0] || ""
-  );
+  const [selectedCategory, setSelectedCategory] = useState<string>(categories[0] || "");
 
   const getInitialCompletion = (): Record<string, boolean> => {
     const saved = localStorage.getItem("tasksCompletion");
@@ -42,8 +40,7 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
     return map;
   };
 
-  const [completion, setCompletion] =
-    useState<Record<string, boolean>>(getInitialCompletion);
+  const [completion, setCompletion] = useState<Record<string, boolean>>(getInitialCompletion);
 
   useEffect(() => {
     localStorage.setItem("tasksCompletion", JSON.stringify(completion));
@@ -57,12 +54,12 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
     () =>
       categories.reduce<Record<string, boolean>>((acc, category) => {
         const allDone = tasksByCategory[category].every((_, idx) =>
-          Boolean(completion[`${category}-${idx}`])
+          Boolean(completion[`${category}-${idx}`]),
         );
         acc[category] = allDone;
         return acc;
       }, {}),
-    [categories, tasksByCategory, completion]
+    [categories, tasksByCategory, completion],
   );
 
   const [showScript, setShowScript] = useState(false);

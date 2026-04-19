@@ -46,7 +46,7 @@ export function usePyodide() {
         return err.toString();
       }
     },
-    [pyodide]
+    [pyodide],
   );
 
   return { run, loading };

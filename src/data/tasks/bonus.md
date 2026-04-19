@@ -1,4 +1,3 @@
-
 ## Zadanie 7: Bankomat (Trudne)
 
 W nowym banku „Cyberbank 2026” bankomat często się zacina, bo klienci próbują wypłacać dziwne kwoty, np. 13 zł. Bankomat obsługuje tylko banknoty 10 zł, 20 zł i 50 zł. Szef prosi Cię o rozwiązanie tego problemu. Napisz program, który będzie pilnował, aby użytkownik podał kwotę podzielną przez 10.
@@ -119,6 +118,7 @@ Komputer jest Twój!
 Robot badawczy wjechał do jaskini, zapisując kolejne punkty trasy. Bateria się kończy i robot musi wrócić dokładnie tą samą drogą, ale w odwrotnej kolejności.
 
 Masz listę:
+
 ```
 ["Wejście", "Sala 1", "Most", "Skarbiec"]
 ```

@@ -96,7 +96,8 @@ export default function AnswerKey() {
   const [selectedTaskIndex, setSelectedTaskIndex] = useState(0);
 
   const selectedTask = tasks[selectedTaskIndex];
-  const answer = pythonAnswers[selectedTask?.title] || "# Brak przygotowanej odpowiedzi dla tego zadania.";
+  const answer =
+    pythonAnswers[selectedTask?.title] || "# Brak przygotowanej odpowiedzi dla tego zadania.";
 
   return (
     <div className="flex h-screen bg-gray-50 text-gray-900 font-sans">
@@ -115,7 +116,8 @@ export default function AnswerKey() {
                   selectedTaskIndex === index
                     ? "bg-blue-100 text-blue-800 font-medium"
                     : "hover:bg-gray-100 text-gray-700"
-                }`}>
+                }`}
+              >
                 {task.title}
               </button>
             ))}
@@ -130,9 +132,15 @@ export default function AnswerKey() {
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             className="p-2 mr-4 rounded-md hover:bg-gray-100 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-            title={isSidebarOpen ? "Ukryj listę" : "Pokaż listę"}>
+            title={isSidebarOpen ? "Ukryj listę" : "Pokaż listę"}
+          >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
           <h1 className="text-xl font-bold text-gray-800">Klucz Odpowiedzi (Dla Wolontariuszy)</h1>
@@ -168,7 +176,13 @@ export default function AnswerKey() {
                           <SyntaxHighlighter
                             PreTag="div"
                             language={match[1]}
-                            customStyle={{ margin: 0, padding: 0, fontSize: "0.9rem", background: "transparent" }}>
+                            customStyle={{
+                              margin: 0,
+                              padding: 0,
+                              fontSize: "0.9rem",
+                              background: "transparent",
+                            }}
+                          >
                             {String(children).replace(/\n$/, "")}
                           </SyntaxHighlighter>
                         ) : (
@@ -191,7 +205,13 @@ export default function AnswerKey() {
                     PreTag="div"
                     language="python"
                     showLineNumbers={true}
-                    customStyle={{ margin: 0, padding: "1rem", fontSize: "0.9rem", borderRadius: "0" }}>
+                    customStyle={{
+                      margin: 0,
+                      padding: "1rem",
+                      fontSize: "0.9rem",
+                      borderRadius: "0",
+                    }}
+                  >
                     {answer}
                   </SyntaxHighlighter>
                 </div>
