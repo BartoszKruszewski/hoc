@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        "hoc-answer-key": resolve(__dirname, "hoc-answer-key.html"),
+        "answer-key": resolve(__dirname, "answer-key.html"),
       },
     },
   },
