@@ -18,6 +18,8 @@ const TasksNavbar = ({
   categoryCompletion,
   showScript,
   toggleShowScript,
+  showCheatSheet,
+  toggleShowCheatSheet,
 }: TasksNavbarProps) => {
   const baseButtonClasses =
     "flex gap-2 items-center px-4 whitespace-nowrap py-1 rounded-md transition-colors duration-200 ease-in-out cursor-pointer";
@@ -48,6 +50,13 @@ const TasksNavbar = ({
         })}
       </div>
       <div className="flex gap-2 ml-2">
+        <button
+          onClick={toggleShowCheatSheet}
+          className={`${baseButtonClasses} ${showCheatSheet ? "bg-white text-indigo-600 hover:bg-violet-200" : "bg-violet-500 text-white hover:bg-violet-400"}`}
+        >
+          <Notebook className="size-4" />
+          {showCheatSheet ? "Ukryj ściągę" : "Pokaż ściągę"}
+        </button>
         <button
           onClick={toggleShowScript}
           className={`${baseButtonClasses} ${showScript ? "bg-white text-indigo-600 hover:bg-violet-200" : "bg-violet-500 text-white hover:bg-violet-400"}`}

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Playground from "../../components/Playground/Playground";
 import TaskPanel, { Task } from "./TaskPanel/TaskPanel";
 import Script from "../Script/Script";
+import CheatSheet from "../CheatSheet/CheatSheet";
 import TasksNavbar from "../../navigation/TasksNavbar/TasksNavbar";
 
 interface TasksProps {
@@ -63,6 +64,7 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
   );
 
   const [showScript, setShowScript] = useState(false);
+  const [showCheatSheet, setShowCheatSheet] = useState(false);
 
   return (
     <div className="flex flex-col h-screen bg-indigo-200">
@@ -73,6 +75,8 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
         categoryCompletion={categoryCompletion}
         showScript={showScript}
         toggleShowScript={() => setShowScript(!showScript)}
+        showCheatSheet={showCheatSheet}
+        toggleShowCheatSheet={() => setShowCheatSheet(!showCheatSheet)}
       />
 
       {/* Main content area */}
@@ -84,6 +88,15 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
           }`}
         >
           <Script />
+        </div>
+
+        {/* Slide-in cheatsheet panel */}
+        <div
+          className={`absolute inset-0 left-0 px-2 z-50 bg-white overflow-y-auto transition-transform duration-300 ease-out will-change-transform ${
+            showCheatSheet ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <CheatSheet />
         </div>
 
         {/* Task list (hidden when script open) */}
