@@ -7,7 +7,7 @@ export function usePyodide() {
 
   useEffect(() => {
     loadPyodide({
-      indexURL: "https://cdn.jsdelivr.net/pyodide/v0.27.5/full/",
+      indexURL: "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/",
     }).then((py) => {
       setPyodide(py);
       setLoading(false);
