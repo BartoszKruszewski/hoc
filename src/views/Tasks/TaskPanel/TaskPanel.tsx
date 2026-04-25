@@ -17,13 +17,13 @@ interface TaskPanelProps {
 }
 
 const TaskPanel = ({ task, isDone, onToggle }: TaskPanelProps) => {
-  const bgClass = isDone ? "bg-green-100" : "bg-slate-50";
+  const bgClass = isDone ? "border-green-400 bg-green-100" : "border-slate-400 bg-slate-50";
 
   return (
-    <div
+    <button
       onClick={onToggle}
-      className={`p-5 ${bgClass} shadow rounded-lg w-full cursor-pointer
-                transition duration-300 ease-in-out hover:-translate-y-0.5`}
+      className={`px-5 py-6 border ${bgClass} rounded-lg w-full text-left cursor-pointer
+                transition duration-150 ease-in-out hover:scale-[0.98]`}
     >
       <div className="flex items-center mb-2">
         <h2 className="text-xl font-bold flex items-center">
@@ -89,7 +89,7 @@ const TaskPanel = ({ task, isDone, onToggle }: TaskPanelProps) => {
           }}
         />
       </div>
-    </div>
+    </button>
   );
 };
 

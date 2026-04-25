@@ -1,12 +1,13 @@
+import { memo } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import script from "../../data/script.md?raw";
 
-const Script = () => {
+const Script = memo(() => {
   return (
-    <div className="px-4 py-8 overflow-auto prose max-w-none">
+    <div className="px-4 py-8 overflow-auto prose max-w-4xl mx-auto will-change-transform">
       <ReactMarkdown
         children={script}
         remarkPlugins={[remarkGfm]}
@@ -27,6 +28,6 @@ const Script = () => {
       />
     </div>
   );
-};
+});
 
 export default Script;

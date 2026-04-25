@@ -65,7 +65,7 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
   const [showScript, setShowScript] = useState(false);
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-b from-indigo-400">
+    <div className="flex flex-col h-screen bg-indigo-200">
       <TasksNavbar
         categories={categories}
         selectedCategory={selectedCategory}
@@ -79,7 +79,7 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
       <div className="relative flex flex-1 overflow-hidden py-2">
         {/* Slide-in script panel */}
         <div
-          className={`absolute inset-y-0 left-0 w-1/3 px-2 bg-white shadow-xl overflow-y-auto transform transition-transform duration-300 ease-in-out ${
+          className={`absolute inset-0 left-0 px-2 z-50 bg-white overflow-y-auto transition-transform duration-300 ease-out will-change-transform ${
             showScript ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -87,11 +87,7 @@ const Tasks = ({ tasks }: TasksProps = { tasks: [] }) => {
         </div>
 
         {/* Task list (hidden when script open) */}
-        <div
-          className={`w-1/3 px-2 overflow-y-auto transition-opacity duration-300 ease-in-out ${
-            showScript ? "opacity-0 pointer-events-none" : "opacity-100"
-          }`}
-        >
+        <div className={"w-1/3 px-2 overflow-y-auto duration-300 ease-in-out"}>
           {selectedCategory && (
             <section className="space-y-2">
               {tasksByCategory[selectedCategory].map((task, idx) => {
