@@ -52,15 +52,17 @@ if k4 > najwiecej: najwiecej = k4
 if k5 > najwiecej: najwiecej = k5
 
 print(najwiecej)`,
-  "Zadanie 7: Bankomat": `kwota = int(input("Podaj kwotę do wypłaty: "))
+  "Zadanie 7: Epidemia Zombie": `zombie = 1
+godzina = 1
+while godzina <= 12:
+    zombie = zombie * 2
+    print("Godzina", godzina, ":", zombie, "zombie")
+    godzina = godzina + 1`,
+  "Zadanie 8: Bankomat": `kwota = int(input("Podaj kwotę do wypłaty: "))
 while kwota % 10 != 0:
     print("Błąd! Kwota musi być podzielna przez 10.")
     kwota = int(input("Podaj kwotę do wypłaty: "))
 print("Wypłacam gotówkę.")`,
-  "Zadanie 8: Epidemia Zombie": `zombie = 1
-for godzina in range(1, 13):
-    zombie = zombie * 2
-    print("Godzina", godzina, ":", zombie, "zombie")`,
   "Zadanie 9: Pasek ładowania gry": `for krok in range(1, 11):
     print("#" * krok)`,
   "Zadanie 10: Bramka na stadionie": `for osoba in range(1, 51):

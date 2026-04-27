@@ -5,7 +5,7 @@ W skarbcu są srebre i złote monety.
 Za jedną srebrną monetę można kupić dwie owce.
 Jedna złota moneta jest warta tyle co trzy srebrne.
 
-Napisz program który wczyta liczbę złotych monet ( **`input()`** ) i wypisze ile owiec można kupić.
+Napisz program który wczyta liczbę złotych monet **`input()`** i wypisze ile owiec można kupić.
 
 **Polecenia Pythona:** `=`, `+`, `*`, `print()`, `input()`
 
@@ -53,3 +53,21 @@ Najciekawszym towarem w sklepiku szkolnym są świeże drożdzówki. Problem pol
 Fajni koledzy spotykają się co tydzień w barze w celu wspólnego wypicia soku. Mają pewną tradycje, mianowicie ustalili, że rachunek za wypite soki opłacać ma kolega który w danym momencie ma najwięcej pieniędzy. Napisz program który przyjmuje od użytkownika pięć wartości (kolejne liczby symbolizujące stan konta każdego z kolegów) i wypisze wartość największą.
 
 **Polecenia Pythona:** `=`, `if`, `>`, `print()`
+
+## Zadanie 7: Epidemia Zombie (Trudne)
+
+W laboratorium wybuchła epidemia wirusa T. Każda zarażona osoba w ciągu godziny zaraża jedną nową osobę, więc liczba zombie podwaja się co godzinę. Pacjent zero uciekł o godzinie 0:00.
+
+Napisz program, który wypisze liczbę zombie po każdej z 12 godzin.
+
+**Przykład działania programu:**
+
+```
+Godzina 1 : 2 zombie
+Godzina 2 : 4 zombie
+Godzina 3 : 8 zombie
+...
+Godzina 12 : 4096 zombie
+```
+
+**Polecenia Pythona:** `=`, `*`, `while()`, `print()`

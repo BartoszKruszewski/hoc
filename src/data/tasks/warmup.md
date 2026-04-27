@@ -1,6 +1,6 @@
 ## Zadanie 1: Wczytaj i wypisz (Łatwe)
 
-Wczytaj jeden napis ( **`input()`** ) i go wypisz ( **`print()`** )
+Wczytaj jeden napis **`input()`** i go wypisz **`print()`**
 
 ## Zadanie 2: Suma dwóch liczb (Łatwe)
 

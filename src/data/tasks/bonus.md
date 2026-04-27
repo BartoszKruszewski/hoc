@@ -1,4 +1,4 @@
-## Zadanie 7: Bankomat (Trudne)
+## Zadanie 8: Bankomat (Trudne)
 
 W nowym banku „Cyberbank 2026” bankomat często się zacina, bo klienci próbują wypłacać dziwne kwoty, np. 13 zł. Bankomat obsługuje tylko banknoty 10 zł, 20 zł i 50 zł. Szef prosi Cię o rozwiązanie tego problemu. Napisz program, który będzie pilnował, aby użytkownik podał kwotę podzielną przez 10.
 
@@ -16,24 +16,6 @@ Wypłacam gotówkę.
 ```
 
 **Polecenia Pythona:** `input()`, `int()`, `while`, `%`, `!=`, `print()`
-
-## Zadanie 8: Epidemia Zombie (Trudne)
-
-W laboratorium wybuchła epidemia wirusa T. Każda zarażona osoba w ciągu godziny zaraża jedną nową osobę, więc liczba zombie podwaja się co godzinę. Pacjent zero uciekł o godzinie 0:00.
-
-Napisz program, który wypisze liczbę zombie po każdej z 12 godzin.
-
-**Przykład działania programu:**
-
-```
-Godzina 1 : 2 zombie
-Godzina 2 : 4 zombie
-Godzina 3 : 8 zombie
-...
-Godzina 12 : 4096 zombie
-```
-
-**Polecenia Pythona:** `=`, `*`, `for`, `range()`, `print()`
 
 ## Zadanie 9: Pasek ładowania gry (Trudne)
 
