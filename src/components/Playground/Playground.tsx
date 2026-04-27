@@ -2,6 +2,7 @@ import { useState } from "react";
 import { usePyodide } from "../../hooks/usePyodide";
 import CodeEditor from "./CodeEditor/CodeEditor";
 import OutputPanel from "./OutputPanel/OutputPanel";
+import { Play } from "lucide-react";
 
 const Playground = () => {
   const { run, loading } = usePyodide();
@@ -13,20 +14,23 @@ const Playground = () => {
   };
 
   return (
-    <div className="items-center p-4 bg-slate-50 rounded-xl h-full overflow-auto">
+    <div className="space-y-4 items-center p-4 bg-slate-50 rounded-xl h-full overflow-auto">
       {loading ? (
         <div>Ładowanie edytora...</div>
       ) : (
         <>
           <CodeEditor code={code} onChange={setCode} />
           <button
-            className="px-20 py-2 rounded bg-indigo-500 text-white hover:bg-violet-600 transition
-                       hover:-translate-y-0.5 hover:cursor-pointer duration-300 ease-in-out text-xl font-semibold"
+            className="flex items-center gap-4 py-5 rounded bg-indigo-500 text-white hover:bg-indigo-600 cursor-pointer
+                       w-full justify-center duration-300 ease-in-out text-2xl font-semibold"
             onClick={handleRun}
           >
-            Uruchom
+            Uruchom <Play className="size-8" />
           </button>
-          <OutputPanel output={output} />
+          <div>
+            <p className="font-bold text-indigo-500">WYJŚCIE PROGRAMU</p>
+            <OutputPanel output={output} />
+          </div>
         </>
       )}
     </div>
